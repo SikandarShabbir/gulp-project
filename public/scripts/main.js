@@ -13,6 +13,8 @@ class Person {
 	}
 }
 
-var abc = new Person("Sikandar");
-
-document.write(abc.hello());
+var person = new Person("Sikandar");
+var greetHTML = templates['greeting']({
+	message: person.hello()
+});
+document.write(greetHTML);
